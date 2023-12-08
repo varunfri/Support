@@ -32,7 +32,12 @@ class _HomeThing extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
-        children: quotes.map((quote) => cardTemplate(quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(quote:quote,
+                                                delete: () {
+                                                      setState(() {
+                                                            quote.remove(quote);
+                                                      }); //this remove the card on the screen
+                                                })).toList(),
         // children: quotes.map((quotes) {
         //   return Text(quotes);
         // }).toList(),
