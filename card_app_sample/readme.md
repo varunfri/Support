@@ -4,6 +4,9 @@
 <br>
 <p>This is my starting journey for flutter. 😊 .<br> This is my passion to create the apps for user that will be useful for them</p>
   </body>
+  <script>
+    alert("Readme");
+  </script>
 </html>
 
 
