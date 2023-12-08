@@ -4,7 +4,8 @@ import 'quotes.dart';
 
 class QuoteCard extends StatelessWidget {
   final Quotes quote;
-  const QuoteCard({required this.quote});
+  final Function()? delete; //() ? we added this because where onpresed: uses ()? so we add it for the function
+  const QuoteCard({required this.quote, required this.delete});
   @override
   Widget build(BuildContext context) {
     //we need to get the values from list
@@ -34,7 +35,7 @@ class QuoteCard extends StatelessWidget {
             ), //Text author
             const SizedBox(height:10.0),
             TextButton.icon(
-              onPressed: () {},
+              onPressed: delete,  //creating function to delete the quotes
               label: Text("Delete Forever"),
               icon: Icon(Icons.delete),
             ),
