@@ -32,6 +32,12 @@ class QuoteCard extends StatelessWidget {
                 color: Colors.grey[800],
               ), //TextStyle
             ), //Text author
+            const SizedBox(height:10.0),
+            TextButton.icon(
+              onPressed: () {},
+              label: Text("Delete Forever"),
+              icon: Icon(Icons.delete),
+            ),
           ],
         ),
       ),
